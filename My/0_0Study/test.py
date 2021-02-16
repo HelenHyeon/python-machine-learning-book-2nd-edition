@@ -5,7 +5,7 @@ class Perceptron(object):
         self.eta = eta
         self.n_iter = n_iter
         self.random_state = random_state
-    def fit(self, x, y):
+    def fit(self, X, y):
         rgen = np.random.RandomState(self.random_state)
         self.w_ = rgen.normal(loc=0.0, scale=0.01, size=1 + X.shpe[1])
         self.errors_ = []
